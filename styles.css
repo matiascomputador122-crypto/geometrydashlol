@@ -1,0 +1,107 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #f8fafc;
+  --accent: #38bdf8;
+  --accent2: #f59e0b;
+  --danger: #ef4444;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top, #1e293b, #020617 70%);
+  color: var(--text);
+}
+
+.app {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 4px;
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.hud > div,
+button {
+  background: var(--panel);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.label {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+button {
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  cursor: pointer;
+}
+
+canvas {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 12px;
+  border: 2px solid #475569;
+  background: #0b1024;
+  display: block;
+}
+
+.level-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.level-card {
+  background: #0b1227;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.level-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.level-card.active {
+  border-color: var(--accent2);
+  box-shadow: 0 0 0 1px var(--accent2) inset;
+}
+
+.level-card .difficulty {
+  color: #94a3b8;
+  font-size: 0.84rem;
+}
+
+.help {
+  color: #cbd5e1;
+}
+
+kbd {
+  border: 1px solid #64748b;
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  padding: 1px 6px;
+  background: #0f172a;
+}

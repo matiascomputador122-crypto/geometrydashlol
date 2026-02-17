@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geometry Dash Lite - Full Level Pack</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Geometry Dash Lite</h1>
+      <p>Jump through every level — including the new <strong>Sunshine</strong> level.</p>
+    </header>
+
+    <section class="hud">
+      <div>
+        <span class="label">Level</span>
+        <span id="levelName">Stereo Madness</span>
+      </div>
+      <div>
+        <span class="label">Progress</span>
+        <span id="progressText">0%</span>
+      </div>
+      <div>
+        <span class="label">Attempts</span>
+        <span id="attemptsText">0</span>
+      </div>
+      <button id="restartBtn">Restart</button>
+    </section>
+
+    <main>
+      <canvas id="gameCanvas" width="960" height="320" aria-label="Geometry Dash game canvas"></canvas>
+    </main>
+
+    <section>
+      <h2>All Levels</h2>
+      <div id="levelGrid" class="level-grid"></div>
+      <p class="help">Controls: <kbd>Space</kbd>, <kbd>W</kbd>, or <kbd>↑</kbd> to jump. Click a level to play.</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
